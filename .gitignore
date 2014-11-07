@@ -15,6 +15,6 @@
 /log/*.log
 /tmp
 
-/vendor/assets/**/*
+/vendor/bundle/**/*
 
 /bin/**/*
