@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<h3><%= @list.title %> </h3>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= @steps.each do |step| %>
+      <tr>
+        <td><%= step.body %></td>
+        <td><%= link_to 'Show', list_step_path(@list, @step) %></td>
+        <td><%= link_to 'Edit', edit_list_step_path(@list, @step) %></td>
+        <td><%= link_to 'Destroy', list_step_path(@list, step), method: :delete, data: { confirm: 'Are you sure?'} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div>
+  <%= link_to 'New Step', new_list_step_path(@list) %> |
+  <%= link_to 'Back', lists_path %>
+</div>

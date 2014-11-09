@@ -10,7 +10,9 @@ feature 'List Page' do
 
     page.must_have_content 'List was successfully created'
   end
+end
 
+feature 'Steps' do
   scenario 'should make a step' do
     visit root_path
 
